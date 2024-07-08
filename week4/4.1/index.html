@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <label>first number</label>
+        <input type="number" id="fnum"> <br>
+        <label>second number</label>
+        <input type="number" id="snum"> <br>
+        <button type = "submit" class="calculateSum" onclick="calculateSum(event)">Calculate sum</button> 
+        <div id="finalvalue"></div>
+    </form>
+</body>
+<script>
+    function calculateSum(event) {
+        event.preventDefault();
+        let a = document.getElementById("fnum").value
+        let b = document.getElementById("snum").value
+        let c = parseFloat(a)+parseFloat(b)
+        // console.log(c)
+        let d = document.getElementById("finalvalue")
+        d.innerHTML = c;
+    }
+</script>
+</html>
